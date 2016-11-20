@@ -1,0 +1,31 @@
+{
+  "name": "express-conditional-tree-middleware",
+  "version": "1.0.0",
+  "description": "A module that helps to create a tree of middlewares and apply strategies on each node (logical operators) in order to build recursively from bottom to top of the tree the result.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src --presets babel-preset-es2015,babel-preset-stage-0 --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dev-Force/express-conditional-tree-middleware"
+  },
+  "keywords": [
+    "expressjs",
+    "middleware",
+    "conditional",
+    "tree",
+    "asynchronous"
+  ],
+  "author": "Tsaganos Apostolos <apostolos94@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6"
+  }
+}
