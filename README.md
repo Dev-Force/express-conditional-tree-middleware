@@ -70,10 +70,10 @@ orChainer.add(andChainer);
 orChainer.add(new IPLimitMiddlewareNode());
 
 //
-//   			Tree Structure
+//               Tree Structure
 //
-//					  And
-//					 /   \
+//                    And
+//                   /   \
 //                  /     \
 //                 Or    IpLimit 
 //               /    \
@@ -83,7 +83,7 @@ orChainer.add(new IPLimitMiddlewareNode());
 
 myRouter.use(
   conditionalMiddleware(app, myRouter, orChainer, function(res) {
-  	res.status(401).json({status: 'Unauthorized'});
+      res.status(401).json({status: 'Unauthorized'});
   })
 )
 ```
