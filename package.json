@@ -1,6 +1,6 @@
 {
   "name": "express-conditional-tree-middleware",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A module that helps to create a tree of middlewares and apply strategies on each node (logical operators) in order to build recursively from bottom to top of the tree the result.",
   "main": "./dist/index.js",
   "scripts": {

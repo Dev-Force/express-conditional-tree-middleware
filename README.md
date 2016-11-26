@@ -13,7 +13,8 @@ Create a tree of middleware nodes that may either be middlewares or combination 
 ### Usage Example
 
 ```javascript
-import conditionalMiddleware from 'express-conditional-tree-middleware';
+import { conditionalMiddleware, MiddlewareChainer, OrMiddlewareStrategy, AndMiddlewareStrategy } from 'express-conditional-tree-middleware';
+
 
 class IPLimitMiddlewareNode {    
 
@@ -53,8 +54,6 @@ class TokenVerificationMiddlewareNode {
     }
     
 }
-
-
 
 
 let myRouter = express.Router();
