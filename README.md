@@ -15,6 +15,7 @@ Create a tree of middleware nodes that may either be middlewares or combination 
 ```javascript
 import { conditionalMiddleware, MiddlewareChainer, OrMiddlewareStrategy, AndMiddlewareStrategy } from 'express-conditional-tree-middleware';
 
+// Every Node class must have a applyMiddleware method in order to be used by a chainer
 
 class IPLimitMiddlewareNode {    
 
@@ -71,16 +72,18 @@ orChainer.add(new IPLimitMiddlewareNode());
 //
 //               Tree Structure
 //
-//                    And
+//                     Or
 //                   /   \
 //                  /     \
-//                 Or    IpLimit 
+//                 And    IpLimit 
 //               /    \
 //              /      \
 // TokenVerification   Admin
 //
 
 myRouter.use(
+  // conditionalMiddleware functions take as arguments the express app, a router that will apply 
+  // the middleware tree, the root element of the tree and a callback error function
   conditionalMiddleware(app, myRouter, orChainer, function(res) {
       res.status(401).json({status: 'Unauthorized'});
   })
