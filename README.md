@@ -96,7 +96,7 @@ myRouter.use(
 ### Design Patterns Used
 
 * Strategy
-* Composition
+* Composite
 
 
 ### License
