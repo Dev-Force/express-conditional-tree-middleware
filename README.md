@@ -8,6 +8,7 @@ I am dedicated to create scalable and easy to use tools, so this is one of them 
 
 ## TL;DR
 Create a tree of middleware nodes that may either be middlewares or combination of middlewares.
+
 Note: The tree is parsed in a DFS fashion.
 
 
