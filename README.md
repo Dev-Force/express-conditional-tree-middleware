@@ -11,6 +11,8 @@ Create a tree of middleware nodes that may either be middlewares or combination 
 
 Note: The tree is parsed in a DFS fashion.
 
+Important Note: And Chainers are executed sequentially. OrChainers are using the Promise.any and as a result they are executed in parallel. I want to implement them soon. If anyone wants to contribute please go ahead :) 
+
 
 ### Usage Example
 
